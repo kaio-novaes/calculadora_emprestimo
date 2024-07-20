@@ -24,7 +24,7 @@ def calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, 
         
     except ValueError:
         print("Não foi possível encontrar uma taxa de juros válida dentro do intervalo especificado.")
-        return None, None, None, None
+        return None
     
     # Taxa de juros mensal encontrada
     taxa_juros_mensal = j * 100  # Convertendo para porcentagem
@@ -62,9 +62,9 @@ def main():
     taxa_juros, parcelas_pagas, parcelas_a_pagar, saldo_restante = calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, num_parcelas)
 
     if taxa_juros is not None:
-        print(f"A taxa de juros por parcela atual é de: {taxa_juros:.2f}% ao mês")
         print(f"Parcelas pagas até o momento: {parcelas_pagas}")
         print(f"Parcelas restantes a pagar: {parcelas_a_pagar}")
+        print(f"A taxa de juros por parcela atual é de: {taxa_juros:.2f}% ao mês")
         print(f"O saldo restante é de: R$ {saldo_restante:.2f}")
 
 if __name__ == "__main__":
