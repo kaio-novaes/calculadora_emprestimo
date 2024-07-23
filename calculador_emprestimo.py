@@ -21,7 +21,6 @@ def calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, 
             valor_parcela = Valor da Prestação.
             j = Taxa de Juros Mensal.
             q0 = Valor Financiado.
-
         """
         if j == 0:
             return valor_parcela * num_parcelas - valor_emprestado
