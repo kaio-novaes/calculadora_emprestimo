@@ -19,7 +19,7 @@ Após o cálculo, a calculadora exibe a taxa de juros mensal atual, o número de
 Este projeto é ideal para quem deseja entender melhor o impacto financeiro de um empréstimo ao longo do tempo e tomar decisões conscientes baseadas em números precisos e calculados.
 
 # Metodologia de Cálculo: 
-### Mesma usado no BCB
+### Mesma usado no BCB (Banco Central do Brasil):
 
 Cálculo com juros compostos e capitalização mensal.
 
