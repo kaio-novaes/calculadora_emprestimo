@@ -76,7 +76,7 @@ def main():
     if taxa_juros is not None:
         print(f"Parcelas pagas até o momento: {parcelas_pagas}")
         print(f"Parcelas restantes a pagar: {parcelas_a_pagar}")
-        print(f"A taxa de juros atual é de: {taxa_juros:.3f}% a.m, {taxa_juros_anual:.2f}% a.a")
+        print(f"A taxa de juros atual é de: {taxa_juros:.2f}% a.m, {taxa_juros_anual:.2f}% a.a")
         print(f"O saldo restante é de: R$ {saldo_restante:.2f}")
 
 if __name__ == "__main__":
