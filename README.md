@@ -19,9 +19,10 @@ Após o cálculo, a calculadora exibe a taxa de juros mensal atual, o número de
 Este projeto é ideal para quem deseja entender melhor o impacto financeiro de um empréstimo ao longo do tempo e tomar decisões conscientes baseadas em números precisos e calculados.
 
 # Metodologia de Cálculo: 
-## Mesma usado no BCB
+### Mesma usado no BCB
 
 Cálculo com juros compostos e capitalização mensal.
+
 Fórmula q0=(((1-(1+j)^-n))/j)*p
 
 Onde:
@@ -29,4 +30,5 @@ n = Nº de Meses
 j = Taxa de Juros Mensal
 p = Valor da Prestação
 q0 = Valor Financiado
-Obs.: O cálculo da taxa de juros (j) é feito por aproximação do Valor da Prestação (p) com margem de erro sobre p inferior a 0.000001.
+
+Obs.: O cálculo da taxa de juros (j) é feito por aproximação do Valor da Prestação (p) com margem de erro sobre (p) inferior a 0.000001.
