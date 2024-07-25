@@ -1,6 +1,6 @@
 #  Calculadora de Taxa de Juros para Empréstimos
 
-Este projeto consiste em uma calculadora desenvolvida em Python para determinar a taxa de juros mensal em contratos de empréstimos com base em pagamentos mensais fixos. A calculadora utiliza o método da bisseção para encontrar a taxa de juros que, quando aplicada aos pagamentos mensais e ao número de parcelas, equilibra o valor emprestado com o valor total pago ao longo do tempo.
+Este projeto consiste em determinar a taxa de juros mensal em contratos de empréstimos com base em pagamentos mensais fixos. A calculadora utiliza o método da bisseção para encontrar a taxa de juros que, quando aplicada aos pagamentos mensais e ao número de parcelas, equilibra o valor emprestado com o valor total pago ao longo do tempo.
 
 ### Funcionalidades Principais:
 Entrada de Dados:
