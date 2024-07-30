@@ -2,6 +2,10 @@ from datetime import datetime
 from scipy.optimize import bisect
 
 
+def formatar_moeda(valor:float) -> str:
+    return f'R$ {valor:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
+
+
 def calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, num_parcelas):
     data_atual = datetime.now()
 
@@ -67,17 +71,16 @@ def main():
 
     data_inicio = interacao_usuario("\nDigite a data de início do desconto")
     data_fim = interacao_usuario("Digite a data final do desconto")
-    valor_parcela = float(input("Valor da parcela mensal: R$ "))
-    valor_emprestado = float(input("Valor total emprestado: R$ "))
+    valor_parcela = float(input("Valor da parcela mensal: R$ ").replace(',', '.'))
+    valor_emprestado = float(input("Valor total emprestado: R$ ").replace(',', '.'))
     num_parcelas = int(input("Quantidade de parcelas do contrato: "))
-
     taxa_juros, taxa_juros_anual, parcelas_pagas, parcelas_a_pagar, saldo_restante = calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, num_parcelas)
 
     if taxa_juros is not None:
         print(f"Parcelas pagas até o momento: {parcelas_pagas}")
         print(f"Parcelas restantes a pagar: {parcelas_a_pagar}")
         print(f"A taxa de juros atual é de: {taxa_juros:.2f}% a.m, {taxa_juros_anual:.2f}% a.a")
-        print(f"O saldo restante é de: R$ {saldo_restante:.2f}")
+        print(f"O saldo restante é de: R$ {formatar_moeda(saldo_restante)}")
 
 if __name__ == "__main__":
     main()
