@@ -11,17 +11,17 @@ Estima o saldo devedor restante.
 
 ### Bibliotecas:
 
-* **scipy:** Para otimização numérica.
-* **datetime:** Para manipulação de datas.
+* **`scipy`:** Para otimização numérica.
+* **`datetime`:** Para manipulação de datas.
   
 #### Versão do Python:
 
-* Python 3.12.
+* `Python 3.12`.
 
 #### Como Usar:
 
 Execute o script Python.
-Insira as datas no formato MM/AAAA, o valor da parcela mensal, o valor total emprestado e o número total de parcelas quando solicitado.
+Insira as datas no `formato MM/AAAA`, o valor da parcela mensal, o valor total emprestado e o número total de parcelas quando solicitado.
 O script exibirá a taxa de juros mensal e anual, o número de parcelas pagas, o número de parcelas restantes e o saldo devedor atual.
 
 ### Metodologia de Cálculo:
