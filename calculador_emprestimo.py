@@ -6,14 +6,14 @@ def formatar_moeda(valor:float) -> str:
     return f'R$ {valor:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
 
 
-def calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, num_parcelas):
+def calcular_taxa_juros(data_inicio, valor_emprestado, valor_parcela, num_parcelas):
     data_atual = datetime.now()
 
-    # Calcula o número de meses entre as datas de início e fim.
-    meses_totais = (data_fim.year - data_inicio.year) * 12 + (data_fim.month - data_inicio.month) + 1
+    # Calcula o número de meses tendo como base o numéros de parcelas.
+    meses_totais = num_parcelas
 
     # calcula o número de meses pagos até a data atual.
-    meses_pagos = (data_atual.year - data_inicio.year) * 12 + (data_atual.month - data_inicio.month)
+    meses_pagos = (data_atual.year - data_inicio.year) * 12 + (data_atual.month - data_inicio.month) + 1
 
 
     def calcular_q0(j):
@@ -70,11 +70,10 @@ def main():
     print("=" * 60)
 
     data_inicio = interacao_usuario("\nDigite a data de início do desconto")
-    data_fim = interacao_usuario("Digite a data final do desconto")
     valor_parcela = float(input("Valor da parcela mensal: R$ ").replace(',', '.'))
     valor_emprestado = float(input("Valor total emprestado: R$ ").replace(',', '.'))
     num_parcelas = int(input("Quantidade de parcelas do contrato: "))
-    taxa_juros, taxa_juros_anual, parcelas_pagas, parcelas_a_pagar, saldo_restante = calcular_taxa_juros(data_inicio, data_fim, valor_emprestado, valor_parcela, num_parcelas)
+    taxa_juros, taxa_juros_anual, parcelas_pagas, parcelas_a_pagar, saldo_restante = calcular_taxa_juros(data_inicio, valor_emprestado, valor_parcela, num_parcelas)
 
     if taxa_juros is not None:
         print(f"Parcelas pagas até o momento: {parcelas_pagas}")
